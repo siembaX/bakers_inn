@@ -1,0 +1,62 @@
+
+/* FONTS */
+@mixin avenir-black{
+    font-family: 'avenir_lt_std95_black';
+}
+@mixin roman55{
+    font-family: 'avenir_lt_std55_roman';
+}
+
+
+@mixin sections-gap{
+    padding: 0 40px 0 40px; /* 40px Left and Right */
+}
+
+@mixin nav-gap{
+    padding: 10px 40px 18px 40px; /* 10px From the Top, 18px below navbar */
+}
+
+@mixin buttons{
+    border: none;
+    border-radius: 3px;
+    color: $white;
+    background-color: $button_gold;
+    padding: 10px 20px 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+
+    &:hover{
+        background-color: rgb(130, 103, 33);
+    }
+}
+
+
+
+@mixin Home-layout{
+    background-position: center;
+    background-size: cover;
+     height: 78vh;
+     border-radius: 10px;
+     color: $white;
+     display: flex;
+     align-items: center;
+     padding: 0 40px 0 40px; /* 40px Left and Right */
+}
+
+@mixin similar-section-layout{
+    background-position: center;
+    background-size: cover;
+     height: 78vh;
+     border-radius: 10px;
+     color: $white;
+     display: flex;
+     align-items: flex-end;
+     padding: 0 40px 0 40px; /* 40px Left and Right */
+}
+
+@mixin kidssect{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+}

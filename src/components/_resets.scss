@@ -1,0 +1,31 @@
+@import './mixins';
+@import '@fontsource/montserrat/700.css';
+
+*{
+   @include avenir-black;
+    box-sizing: border-box;
+}
+
+a{
+    font-size: 20px;
+}
+
+p{
+    @include roman55;
+    font-family: 'avenir_lt_55_romanregular';
+}
+
+body{
+    margin: 0;
+}
+
+h2{
+    font-size: 50px;
+    letter-spacing: 2px;
+    font-family: 'avenir_lt_65_mediumbold';
+}
+
+h1{
+    font-family: 'Montserrat';
+    font-size:  45px;
+}

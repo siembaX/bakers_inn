@@ -1,0 +1,847 @@
+@use './src/components/' as *;
+@import './src/components/mixins';
+
+/* NAVIGATION SECTION */
+
+ .nav{
+    display: flex;
+    justify-content: space-between;
+    @include nav-gap;
+} 
+
+ .nav .links{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    button{
+        @include buttons;
+    }
+}
+
+.nav .links a{
+    text-decoration: none;
+    list-style: none;
+    gap: 12px;
+    font-family: 'avenir_lt_std95_black';
+} 
+
+.wrapper {
+    @include sections-gap;
+}
+/* NAV SECTION ENDS */
+
+/* HOME SECTION */
+
+.Hero-Section{
+
+    #bread-images .sliding-images{
+        img{
+            width: 200px;
+        }
+    }
+   
+    @include Home-layout;
+    background-image: url(./images/Hero-Img.png);
+    button{
+        @include buttons;
+        width: 165px;
+    }
+    .items-inrow{
+        display: flex;
+    }
+    #bread-images{
+        margin-left: 70px;
+    }
+    .sliding-images{
+        display: flex;
+        gap: 20px;
+    }
+    .grid{
+        $column_count:4;
+        display: grid;
+        grid-template-columns:
+            repeat($column_count, 1fr) ;
+    }
+    @media (width < 568px) {
+        .grid {$column_count:1;}
+    }
+
+    #hero-txt{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+.Hero-About{
+    padding: 70px 0 0 0;
+    #Hero-AboutContect{
+        padding: 0 0 30px 0;
+    }
+
+    button{
+        @include buttons;
+    }
+
+    .all-cards{
+        display: flex;
+        gap: 60px;
+        justify-content: center;   
+    }
+
+    .card{
+        border: none;
+        width: 280px;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+    }
+    .card1, .card2{
+        width: 320px
+    }
+
+    #card2{
+        display: flex;
+        justify-content: flex-end;
+    }
+    #card-body2{
+        display: flex;
+       text-align: center;
+    }
+}
+
+.ProductRange-Section{
+    padding: 200px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $faded_w_bg;
+
+    .my-btns{
+        @include buttons;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:300px;
+        text-decoration: none;
+    }
+
+    h2{
+        text-align: center;
+        padding: 0 0 40px 0;
+    }
+
+    .product-range{
+        display: flex;
+        gap: 20px;
+        padding: 0 0 40px 0;
+    }
+}
+
+.wrapper .Contenttxt{
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    position: relative;
+    
+    h4{
+        position: absolute;
+        color: $white;
+        padding: 10px
+    }
+}
+.wrapper .Booking-FactoryTour{
+    height: 100vh;
+    padding: 90px 0 0 0;
+    a{
+        @include buttons;
+        width: 260px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+    #booking-txtcontent{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    img{
+        width :600px;
+        border-radius: 5px
+    }
+}
+/*  */
+.wrapper .Request-DonationSection{
+    height: 100vh;
+    padding: 90px 0 0 0;
+    a{
+        @include buttons;
+        width: 260px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+    #booking-txtcontent{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    img{
+        width :600px;
+        border-radius: 5px
+    }
+}
+.wrapper{
+    position: relative;
+}
+.wrapper .Kidz-cornerSection{
+    height: 100vh;
+    @include similar-section-layout;
+    background-image: url(./images/Hero-Img.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .all-items{
+        display: flex;
+    }
+
+    img{  
+        position: relative;
+        width: 781px;
+        left: -95px;
+        top: 40px;
+    }
+
+    #kidz-txt{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        h2{
+            font-family: '3dumbregular';
+            font-size: 80px;
+            letter-spacing: normal;
+        }
+        p{
+            width: 50%;
+        }
+    }
+    a{
+        @include buttons;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:300px;
+        text-decoration: none;
+        background-color:$red_faded;
+    }
+}
+
+.wrapper .Recipes-Section{
+    padding: 90px 0 0 0;
+}
+    
+
+/* HOME SECTION ENDS */
+
+/* ABOUT SECTION STARTS */
+
+.wrapper .ceo-remarks{
+    div{
+        display: flex;
+        justify-content: end;
+        .signatures{
+            font-family: 'bulgattiregular';
+            font-size: 25px;
+        }
+    }
+    #ceo-texts{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.wrapper .core-values{
+    background-color: $faded_w_bg;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $text_blue;
+
+    .card{
+        color: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $text_blue;
+    }
+    .card-header{
+        border: none;
+        color: none;
+        text-align: center;
+    }
+}
+
+.about-section{
+    @include similar-section-layout;
+    background-image: url(./images/about-grad.png);
+}
+
+.wrapper .mission-section{
+    background-color: $faded_gold;
+    padding: 90px;
+
+    .flexed-items{
+        display: flex;
+        
+        align-items: center;
+        gap: 25px;
+
+        p{
+            width: 54%;
+        }
+    }
+}
+.wrapper .mission-section img{
+    width: 140px
+}
+
+.wrapper  #card-pos{
+    display: flex;
+    justify-content: center;
+    
+}
+
+/* ABOUT SECTION ENDS */
+
+/* PRODUCTS SECTION STARTS */
+
+.products-sections{
+    @include similar-section-layout;
+    background-image: url(./images/products.png)
+}
+/* PRODUCT ENDS HERE */
+
+/* CONTACT SECTION */
+
+.contact-section{
+    @include similar-section-layout;
+    background-image: url(./images/contact-sect.png)
+}
+
+.wrapper .request-callback-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    form{
+
+        option[value=""]{
+            color: gray;
+        }
+    button{
+        @include buttons;
+        width: 100%;
+        margin-top: 30px;
+    }
+        textarea{
+            background-color: $btn_fadedred;  
+            padding: 20px;
+            width: 100%;  
+        }
+        #interestarea{
+            width: 100%;
+        }
+    div{
+        display: flex;
+        gap: 40px;
+        padding: 30px 0 0 0;
+    }
+    }
+
+    // option{
+      
+    // }
+
+    input, select{
+        background-color: $btn_fadedred;
+        padding: 20px;
+        width: 440px;
+    }
+}
+
+/* CONTACT ENDS */
+
+/* KIDZ START */
+.wrapper{
+/*     display: flex;
+    flex-direction: column; */
+}
+.wrapper .kids_hero{
+/*     display: flex;
+    flex-direction: column;
+    position: absolute; */
+    background-size: cover;
+    background-position: center;
+    width: 94vw;
+    height: 85vh;
+    background-image: url(./images/kidscorner.png);
+   
+}
+.wrapper .maze_section{
+    
+    background-color: $section_blue;
+    @include similar-section-layout;
+    display: flex;
+    align-items: center;
+    
+
+    img{
+        display: flex;
+        width: 500px;
+        justify-content: flex-end;
+    }
+
+    #flexx{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    #booking-txtcontent{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        a{
+            @include buttons;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        p{
+            width: 48%;
+            line-height: normal;
+        }
+    }
+}
+
+.wrapper .newsletter-section{
+    background-color: $button_gold;
+    @include similar-section-layout;
+    height: 400px;
+}
+
+.breadset{
+    display: flex;
+    align-items: flex-end;
+    img{
+        width: 90px !important;
+    }
+}
+
+.wrapper .newsletter-section .breadsettxt{
+    input{
+        display: flex;
+        position: relative;
+        height: 50px;
+        width: 300px;
+        border-radius: 5px;
+    }
+    button{
+        position: absolute;
+        background-color: $text_blue;
+        border: none;
+        border-radius: 3px;
+        padding: 10px;
+        width: 100px;
+
+    }
+}
+.wrapper #sect-color-blue{
+    background-color: $section_blue;
+}
+
+.wrapper #sect-color-red{
+    background-color: $red_faded;
+}
+
+.wrapper #sect-color-deepblue{
+    background-color: $text_blue;
+}
+
+
+
+.wrapper .spaceship-maze{
+    @include similar-section-layout;
+    @include kidssect;
+    
+    #spaceship-txt{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        p{
+           
+            width: 56%;
+        }
+
+        a{
+            @include buttons;
+            width: 160px;
+        }
+        .redbtn{
+            background-color: $btn_fadedred;
+            color: $red_faded;
+
+            &:hover{
+                background-color: rgb(200, 200, 200);
+            }
+        }
+    }
+
+    #maze-puzzle-image{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    img{
+        width: 500px;
+    }
+}
+
+.wrapper .gap-below{
+    padding: 60px 0 0 60px;
+}
+.wrapper .gap-below-double{
+    padding: 120px 0 0 120px;
+}
+
+.wrapper #sect-color-red a{
+    background-color: $white;
+    color: $red_faded;
+}
+
+/* END */
+
+/* Include CSS Normalize */
+
+
+$gray-color: #ddd;
+$medium-up: 600px;
+$large-up: 1000px;
+$global-radius: 4px;
+
+
+@mixin heading-font-regular {
+	font-family: 'Helvetica', 'Helvetica Neue', 'Arial', sans-serif;;
+}
+
+
+
+main {
+  padding: 2em;  
+  float: left;
+  width: 100%;
+}
+
+
+/* TABLE STYLING 101 */
+
+.wrapper .table-section h2{
+    text-align: center;
+    color: $text_blue;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	float: left;
+   margin: 0 0 2em;
+	thead {
+		border-bottom: 3px solid $button_gold;
+		th {
+			padding: 0.35em 0 .35em;
+       font-weight: 400;
+			text-align: left;
+			@include heading-font-regular;
+			font-size: 1.25em;
+		}
+		
+	}
+
+	tbody {
+		/* border-bottom: 1px solid $button_gold; */
+		tr {
+			/* border-bottom: 2px solid #ddd; */
+       
+			td {
+				padding: .75em 0;
+
+				a {
+					color: $button_gold;
+					text-decoration: none;
+					display: inline-block;
+					margin: 0 .5em 0 0;
+					&:hover, &:active, &:focus {
+						color: darken($button_gold, 10%);
+						border: none;
+					}
+				}
+			}
+		}
+	}
+
+	tfoot {
+		td {
+			padding: 0.35em 0 .35em;
+
+			text-align: left;
+			@include heading-font-regular;
+			font-size: 1.25em;
+		}
+	}
+}
+
+@media screen and (min-width: $large-up) {
+  table {
+		width: 100%;
+
+		thead {
+			border-bottom: 2px solid $button_gold;
+			th {
+			}
+			
+		}
+
+		tbody {
+			tr {
+				/* border-bottom: 1px solid #ddd; */
+				td {
+					
+				}
+			}
+		}
+	}
+}
+
+///RWD MIXIN BELOW
+@mixin rwd-first {
+	display: block;
+  
+
+  tbody {
+    border: none;
+  }
+		tbody, th, td, tr, tfoot {
+			display: block; 
+		}
+
+		thead {
+			display: none;
+		}
+		tr {
+      float: left;
+      width: 100%;
+      margin: 0 0 1em;
+       border: 1px solid $gray-color;
+			box-shadow: 0px 2px 5px 0px $gray-color;
+			border-radius: $global-radius;
+			border-top: 5px solid $button_gold;
+
+			td {
+				padding: .5em .5em .5em 50%;
+				float:left;
+       		width: 100%;
+				&:before {
+					width: 100%;
+					display: block;
+					float: left;
+					padding: .5em .5em .5em 0;
+					clear: both;
+					margin: -.5em 0 0 -100%;
+					@include heading-font-regular;
+					font-size: 1.125em;
+
+				}
+			}
+		}
+
+		tr:nth-of-type(even) {
+			//background: $gray-color;
+			td {
+				
+				&:before {
+					
+				}
+			}
+		}
+}
+
+@mixin rwd-second {
+	display: table;
+	border: none;
+
+  tbody {
+    border-bottom: none;
+  }
+  .test-head1{
+    border-left: 2px solid $button_gold;
+    border-right: 2px solid $button_gold;
+  }
+	th, td {
+		display: table-cell;
+        position: relative;
+        left: 10px;
+        color: $text_blue;
+	}
+
+	tr {
+        /* border-left: 1px solid $button_gold; */
+		display: table-row;
+		border: none;
+		border-bottom: none;
+    float: none;
+    margin: 0;
+		box-shadow: none;
+
+		td {
+			padding: .75em 0 0.75em .25em;
+      float: none;
+      width: auto;
+
+			&:before {
+				padding: 0 !important;
+			}
+		}
+	}
+
+	thead {
+		display: table-header-group;
+	}
+
+	tbody,tfoot {
+		display: table-row-group;
+	}
+
+	tr:nth-of-type(even) {
+		background:none;
+		td {
+			
+			&:before {
+				
+			}
+		}
+	}
+}
+
+%responive-tables {
+	@include rwd-first;
+
+	@media screen and (min-width: $medium-up) { 
+		@include rwd-second;
+		
+	}
+}
+
+%responive-tables-large {
+	@include rwd-first;
+
+	@media screen and (min-width: $large-up) { 
+		@include rwd-second;
+		
+	}
+}
+
+@mixin responive-tables($headings...) {
+	$list: $headings;
+
+	@each $list-headings in $list {
+		$i: index($list, $list-headings);
+		tbody tr td:nth-of-type(#{$i}):before { 
+			content: $list-headings; 
+		}
+		
+		@media screen and (min-width: $medium-up) { 
+			tbody tr td:nth-of-type(#{$i}):before { 
+				content: ''; 
+			}
+		}
+
+	}
+}
+
+@mixin responive-tables-large($headings...) {
+	$list: $headings;
+
+	@each $list-headings in $list {
+		$i: index($list, $list-headings);
+		tbody tr td:nth-of-type(#{$i}):before { 
+			content: $list-headings; 
+		}
+		
+		@media screen and (min-width: $large-up) { 
+			tbody tr td:nth-of-type(#{$i}):before { 
+				content: ''; 
+			}
+		}
+
+	}
+}
+
+#rwd-table {
+	@extend %responive-tables;
+	@include responive-tables('Heading Col 1', 'Heading Col 2', 'Heading Col 3');
+}
+
+#rwd-table-large {
+	@extend %responive-tables-large;
+	@include responive-tables-large('Heading Col 1', 'Heading Col 2', 'Heading Col 3','Heading Col 4');
+}
+
+/* Styling of TABLE ENDS!! */
+
+/* FOOTER STARTS */
+.wrapper .footer{
+    background-color: $text_blue;
+    color: white;
+    height: 40vh;
+    padding: 40px;
+    margin: 0;
+
+
+}
+.footer .top-row div{
+    display: flex;
+    justify-content: space-between;
+}
+.footer .top-row div hr{
+    height: 2px solid gold;
+    width: 30%;
+}
+
+.wrapper .packing-team{
+    background-image: url(./images/packagings.png);
+    background-position: center;
+    @include similar-section-layout;
+}
+
+.wrapper .items-apart{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 110px 50px 110px;
+    
+}
+
+.wrapper .request-callback-section{
+    text-align: center;
+}
+
